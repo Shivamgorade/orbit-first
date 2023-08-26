@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <title>Your Page Title</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Navigation Bar or Logo can be added here -->
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to</h1>
+                <h2>Orbit Community</h2>
+                <p>Discover amazing content and experiences</p>
+                <a href="#" class="cta-button">Get Started</a>
+            </div>
+            <div class="hero-vector">
+                <!-- Vector graphics or illustrations can be added here -->
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <!-- Feature Section Content Goes Here -->
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <!-- Footer Content Goes Here -->
+    </footer>
+
+    <!-- Card Container Section -->
+    <div class="card-container">
+        {% for card in card_data %}
+        <div class="card">
+            <h2>{{ card.company_name }}</h2>
+            <p>{{ card.designation }}</p>
+            <p>{{ card.location }}</p>
+            <a href="{{ card.apply_link }}" class="apply-button">Apply</a>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

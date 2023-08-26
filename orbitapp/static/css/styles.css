@@ -1,0 +1,176 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a basic background color and font styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #fff;
+}
+
+/* Style the header section */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the hero section */
+.hero {
+    background-image: linear-gradient(135deg, #0FF0B3, 
+    #036ED9);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* Style the hero content */
+.hero-content {
+    z-index: 1;
+    position: relative;
+}
+
+/* Style the hero headings */
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Style the hero paragraph */
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* Style the hero call-to-action button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0864e5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3fc48f;
+}
+
+/* Style the vector graphics in the hero section */
+.hero-vector {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/* Add vector graphics and animations to hero-vector */
+.hero-vector::after {
+    content: "";
+    background-image: url('your-vector-image.svg'); /* Replace with your vector image URL */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px; /* Adjust the size as needed */
+    height: 400px; /* Adjust the size as needed */
+    position: absolute;
+    top: -100px; /* Adjust the position as needed */
+    animation: float 4s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px); /* Adjust the float height as needed */
+    }
+}
+
+/* Style the feature section */
+.features {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Style the footer section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the card container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Style individual cards */
+.card {
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    background: linear-gradient(45deg,#E3E3E3,  #5D6874);
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Add hover effect to cards */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Style card headings */
+.card h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Style card paragraphs */
+.card p {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* Style the "Apply" button in cards */
+.apply-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #FF5F6D;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.apply-button:hover {
+    background-color: #FF5F6D;
+    color: #fff;
+}
+
+/* Additional styling can be added as needed */
