@@ -1,8 +1,13 @@
-# myapp/admin.py
-from django.contrib import admin
+from django.shortcuts import render
 from .models import Card
 
-class CardAdmin(admin.ModelAdmin):
-    list_display = ('company_name', 'designation', 'apply_link', 'location')
+def home(request):
+    query = request.GET.get('q')
+    card_data = Card.objects.all()
 
-admin.site.register(Card, CardAdmin)
+    if query:
+        card_data = card_data.filter(
+            Q(company_name__icontains=query) | Q(location__icontains=query)
+        )
+
+    return render(request, 'orbitapp/index.html', {'card_data': card_data, 'query': query})

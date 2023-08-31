@@ -4,50 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
-    <title>Your Page Title</title>
+    <title>Orbit</title>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <!-- Navigation Bar or Logo can be added here -->
+        <!-- Header content goes here -->
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section class="hero">
             <div class="hero-content">
                 <h1>Welcome to</h1>
                 <h2>Orbit Community</h2>
-                <p>Discover amazing content and experiences</p>
-                <a href="#" class="cta-button">Get Started</a>
+                <p>Discover amazing Job Opportunities</p>
+                <form method="GET" action="{% url 'home' %}">
+                    <input type="text" name="q" class="search-input" placeholder="Search by Company, Location, or Position" value="{{ query }}">
+                    <button type="submit" class="cta-button">Search</button>
+                </form>
             </div>
-            <div class="hero-vector">
-                <!-- Vector graphics or illustrations can be added here -->
-            </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features">
-            <!-- Feature Section Content Goes Here -->
         </section>
     </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <!-- Footer Content Goes Here -->
-    </footer>
-
-    <!-- Card Container Section -->
     <div class="card-container">
-        {% for card in card_data %}
-        <div class="card">
-            <h2>{{ card.company_name }}</h2>
-            <p>{{ card.designation }}</p>
-            <p>{{ card.location }}</p>
-            <a href="{{ card.apply_link }}" class="apply-button">Apply</a>
-        </div>
-        {% endfor %}
+        {% if card_data %}
+            {% for card in card_data %}
+                <div class="card">
+                    <h2>{{ card.company_name }}</h2>
+                    <p>{{ card.designation }}</p>
+                    <p>{{ card.location }}</p>
+                    <a href="{{ card.apply_link }}" class="apply-button">Apply</a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Oops, no results found.</p>
+        {% endif %}
     </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h3>Orbit</h3>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2023 Orbit. All rights reserved.</p>
+            <p>123 Main Street, City, Country</p>
+            <p>Email: info@orbit.com</p>
+        </div>
+    </footer>
 </body>
 </html>
