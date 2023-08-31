@@ -57,9 +57,10 @@ header {
 
 /* Style the hero call-to-action button */
 .cta-button {
+    margin-top: 20px;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0864e5;
+    background-color: #1cd822;
     color: #fff;
     text-decoration: none;
     border-radius: 25px;
@@ -68,30 +69,11 @@ header {
 }
 
 .cta-button:hover {
+    
     background-color: #3fc48f;
 }
 
-/* Style the vector graphics in the hero section */
-.hero-vector {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-}
 
-/* Add vector graphics and animations to hero-vector */
-.hero-vector::after {
-    content: "";
-    background-image: url('your-vector-image.svg'); /* Replace with your vector image URL */
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 400px; /* Adjust the size as needed */
-    height: 400px; /* Adjust the size as needed */
-    position: absolute;
-    top: -100px; /* Adjust the position as needed */
-    animation: float 4s infinite alternate ease-in-out;
-}
 
 @keyframes float {
     0% {
@@ -120,57 +102,169 @@ footer {
 }
 
 /* Style the card container */
+/* Center the card container horizontally and vertically */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes up at least the viewport height */
+}
+
+/* Style individual cards */
+/* Center the card container horizontally and vertically */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the container takes up at least the viewport height */
 }
 
 /* Style individual cards */
 .card {
-    width: 250px;
-    height: 200px;
-    padding: 20px;
-    background: linear-gradient(45deg,#E3E3E3,  #5D6874);
+    width: 1080(50% - 20px); /* Two cards in a row with gap in between */
+    height: 450px;
+    background: #F5F5F5; /* Background color */
     border-radius: 15px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Slightly modified box shadow */
     transition: transform 0.2s ease-in-out;
+    display: flex; /* Center content horizontally and vertically */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center; /* Center text content */
 }
 
 /* Add hover effect to cards */
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); /* Adjusted box shadow on hover */
 }
 
 /* Style card headings */
 .card h2 {
-    font-size: 20px;
+    font-size: 24px; /* Larger font size */
     font-weight: bold;
-    color: #fff;
+    color: #333; /* Darker text color */
+    margin-top: 20px; /* Increased margin top */
 }
 
 /* Style card paragraphs */
 .card p {
     font-size: 16px;
-    color: #fff;
+    color: #555; /* Slightly darker text color */
     margin-top: 10px;
 }
 
 /* Style the "Apply" button in cards */
 .apply-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #FF5F6D;
+    padding: 12px 24px; /* Larger padding for the button */
+    background-color: #FF5F6D; /* Bold accent color */
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    margin-top: 15px;
+    margin-top: 20px; /* Increased margin top */
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .apply-button:hover {
-    background-color: #FF5F6D;
+    background-color: #E65175; /* Slightly darker on hover */
     color: #fff;
 }
 
+
+
 /* Additional styling can be added as needed */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+/* Footer Styles */
+footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    padding: 30px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer-info {
+    margin-top: 20px;
+}
+
+/* Media Queries - Adjust styles for smaller screens if needed */
+@media (max-width: 768px) {
+    footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        margin-top: 20px;
+    }
+
+    .footer-links ul li {
+        margin: 0;
+        padding: 10px 0;
+        display: block;
+    }
+}
