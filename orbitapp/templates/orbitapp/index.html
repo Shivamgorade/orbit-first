@@ -17,15 +17,15 @@
                 <h1>Welcome to</h1>
                 <h2>Orbit Community</h2>
                 <p>Discover amazing Job Opportunities</p>
-                <form method="GET" action="{% url 'home' %}">
-                    <input type="text" name="q" class="search-input" placeholder="Search by Company, Location, or Position" value="{{ query }}">
+               <form method="GET" action="{% url 'home' %}#search-results">
+                    <input type="" name="q" class="search-input" placeholder="Search by Position, Company, or Location"  value="{{ query|default:'' }}">
                     <button type="submit" class="cta-button">Search</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <div class="card-container">
+    <div class="card-container" id="search-results"> <!-- Add the 'id' attribute here -->
         {% if card_data %}
             {% for card in card_data %}
                 <div class="card">
@@ -36,7 +36,7 @@
                 </div>
             {% endfor %}
         {% else %}
-            <p>Oops, no results found.</p>
+            <h3>Oops, no results found.</h3>
         {% endif %}
     </div>
 
