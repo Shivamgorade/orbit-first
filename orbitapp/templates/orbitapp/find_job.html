@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/find_job.css">
     <title>Orbit</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
                 <h1>Welcome to</h1>
                 <h2>Orbit Community</h2>
                 <p>Discover amazing Job Opportunities</p>
-               <form method="GET" action="{% url 'home' %}#search-results">
+               <form method="GET" action="{% url 'find_job' %}#search-results">
                     <input type="" name="q" class="search-input" placeholder="Search by Position, Company, or Location"  value="{{ query|default:'' }}">
                     <button type="submit" class="cta-button">Search</button>
                 </form>

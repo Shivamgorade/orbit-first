@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/css/home.css">
+    <title>Orbit</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Orbit</div>
+        <button class="donate-button">Donate</button>
+    </div>
+    <div class="content">
+        <h1>Orbit Community</h1>
+        <p>Find your match</p>
+        <a href="find-job" class="cta-button">Get Started</a>
+    </div>
+    <div class="image-section">
+        <div class="image-box">
+            <img src="{% static 'images/find_job.jpg' %}" alt="Find Job">
+            <p>Find Job</p>
+        </div>
+        <div class="image-box">
+            <img src="{% static 'images/find_talent.jpg' %}" alt="Find Talent">
+            <p>Find Talent</p>
+        </div>
+        <div class="image-box">
+            <img src="{% static 'images/find_your_senior.jpg' %}" alt="Find Your Senior">
+            <p>Find Your Senior</p>
+        </div>
+    </div>
+</body>
+</html>
