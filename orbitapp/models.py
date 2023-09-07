@@ -10,6 +10,10 @@ class Card(models.Model):
     def __str__(self):
         return self.company_name
 
+class Quote(models.Model):
+    text = models.TextField(max_length=100)
 
+    def __str__(self):
+        return self.text
 
 
