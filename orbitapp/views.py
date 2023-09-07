@@ -1,12 +1,20 @@
 from django.shortcuts import render
 from django.db.models import Q
 from .models import Card
+from .models import Quote
+import random 
 
 def home(request):
-    # Add any data or logic you need for this view
-    return render(request, 'orbitapp/home.html') 
+    quotes = Quote.objects.all()
+    random_quote = None
 
+    if quotes:
+        random_quote = random.choice(quotes)
 
+    print("Quotes:", quotes)
+    print("Random Quote:", random_quote)
+
+    return render(request, 'orbitapp/home.html', {'random_quote': random_quote})
 def find_job(request):
     query = request.GET.get('q')
     card_data = Card.objects.all()
