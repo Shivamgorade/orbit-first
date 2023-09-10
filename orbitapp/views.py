@@ -4,6 +4,9 @@ from .models import Card
 from .models import Quote
 import random 
 
+#home page 
+
+
 def home(request):
     quotes = Quote.objects.all()
     random_quote = None
@@ -15,6 +18,11 @@ def home(request):
     print("Random Quote:", random_quote)
 
     return render(request, 'orbitapp/home.html', {'random_quote': random_quote})
+
+#page for find job
+
+
+
 def find_job(request):
     query = request.GET.get('q')
     card_data = Card.objects.all()
@@ -25,3 +33,30 @@ def find_job(request):
         )
 
     return render(request, 'orbitapp/find_job.html', {'card_data': card_data, 'query': query})
+
+#page for find talent 
+
+def find_talent(request):
+    if request.method == 'POST':
+        company_name = request.POST['company_name']
+        designation = request.POST['designation']
+        apply_link = request.POST['apply_link']
+        location = request.POST['location']
+
+        # Prepend "http://" if the URL doesn't start with a scheme
+        if not apply_link.startswith(('http://', 'https://')):
+            apply_link = 'http://' + apply_link
+
+        card = Card(
+            company_name=company_name,
+            designation=designation,
+            apply_link=apply_link,
+            location=location
+        )
+        card.save()
+
+    return render(request, 'orbitapp/find_talent.html')
+#page for find senior 
+
+def find_senior(request):
+    return render(request, 'orbitapp/find_senior.html')

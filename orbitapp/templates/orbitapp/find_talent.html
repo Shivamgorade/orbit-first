@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/find_talent.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <title>Find Talent</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">Orbit</div>
+        <button class="donate-button">Donate</button>
+    </div>
+
+    <main>
+        <section class="form-container">
+            <h2>Upload Your Job </h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="company_name">Company Name:</label>
+                <input type="text" id="company_name" name="company_name" required>
+
+                <label for="designation">Designation:</label>
+                <input type="text" id="designation" name="designation" required>
+
+                <label for="apply_link">Apply Link:</label>
+                <input type="text" id="apply_link" name="apply_link" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <button type="submit">SUBMIT</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
