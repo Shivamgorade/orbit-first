@@ -18,15 +18,23 @@
                         <p>Find your match</p>
                         <p id="quoteDisplay">{{ random_quote.text }}</p>
                     </div>
-                    <div class='img-container'>
+                            <div class='img-container'>
+                        
+                            <div><img src="{% static 'images/find_job.jpg' %}" alt="Find Senior" class="image1"></div>
+
+                            <a href="/find-job"><button class="btn1">Find Job</button></a>
+
+                            <div><img src="{% static 'images/find_senior.jpg' %}" alt="Find Senior" class="image2"></div>
+
+                            <a href="/find-senior"><button class="btn2">Find Senior</button></a>
+
+                            <div><img src="{% static 'images/find_talent.jpg' %}" alt="Find Senior" class="image3"></div>
+
+                            <a href="/find-talent"><button class="btn3">Find Talent</button></a>
                 
-                    <div><img src="{% static 'images/find_job.jpg' %}" alt="Find Senior" class="image1"></div>
-                    <a href="/find-job"><button class="btn1">Find Job</button></a>
-                    <div><img src="{% static 'images/find_senior.jpg' %}" alt="Find Senior" class="image2"></div>
-                    <div><button class="btn2">Find Senior</button></div>
-                    <div><img src="{% static 'images/find_talent.jpg' %}" alt="Find Senior" class="image3"></div>
-                    <div><button class="btn3">Find Talent</button></div>
-        
-                     </div>
+                            </div>
+
+
+                            
                  </body>
                 </html>
