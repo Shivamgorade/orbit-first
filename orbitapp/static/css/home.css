@@ -82,18 +82,14 @@ body {
     max-width: 250px; /* Limit maximum width for larger screens */
     border: 2px solid; /* Add a border for all images */
     border-radius: 10px
-
 }
-
-
-.image2{
-    margin-top: 20px;
+.image2 {
     margin-left: 0px;
+    margin-top: 20px;
     width: 100%; /* Take up 100% of the container width */
     max-width: 250px; /* Limit maximum width for larger screens */
     border: 2px solid; /* Add a border for all images */
     border-radius: 10px
-
 }
 .image3{
     margin-left: 0px;
@@ -102,9 +98,9 @@ body {
     max-width: 250px; /* Limit maximum width for larger screens */
     border: 2px solid; /* Add a border for all images */
     border-radius: 10px
-
 }
-.btn1{
+
+.btn1 {
     margin-top: 178px;
     margin-left: -200px;
     background-color: #A2C579; /* Childish color for the button background */
@@ -116,36 +112,32 @@ body {
     border-radius: 10px;
     cursor: pointer;
    /* Add margin between image and button */
-
 }
 .btn2{
-    margin-left: -200px;
     margin-top: 178px;
+    margin-left: -200px;
     background-color: #EFB495; /* Childish color for the button background */
     color: rgb(49, 48, 48);
-    font-weight: bold;
+     font-weight: bold;
     padding: 10px 20px;
     border: 2px solid;
     border-color: black;
     border-radius: 10px;
     cursor: pointer;
-  /* Add margin between image and button */
-
-
 }
 .btn3{
-    margin-left: -200px;
     margin-top: 178px;
+    margin-left: -200px;
     background-color: #64CCC5; /* Childish color for the button background */
     color: rgb(49, 48, 48);
-    font-weight: bold;
+     font-weight: bold;
     padding: 10px 20px;
     border: 2px solid;
     border-color: black;
     border-radius: 10px;
     cursor: pointer;
-    /* Add margin between image and button */
 }
+
 
 .btn1:hover {
     background-color: #77d2a9; /* Change background color on hover */
@@ -156,4 +148,3 @@ body {
 .btn3:hover {
     background-color: #c387bc; /* Change background color on hover */
 }
-

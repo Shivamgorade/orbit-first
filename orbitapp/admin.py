@@ -3,7 +3,7 @@ from .models import Card
 from .models import Quote
 
 class CardAdmin(admin.ModelAdmin):
-    list_display = ('company_name', 'designation', 'location', 'apply_link')
+    list_display = ('company_name', 'designation', 'location', 'apply_link', 'experience', 'salary','qualification')
     search_fields = ('company_name', 'designation', 'location')
 
 admin.site.register(Card, CardAdmin)

@@ -9,30 +9,48 @@
     <title>Find Talent</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo">Orbit</div>
-        <button class="donate-button">Donate</button>
-    </div>
-
     <main>
         <section class="form-container">
-            <h2>Upload Your Job </h2>
+            <h2>Upload Your Job</h2>
             <form method="post">
                 {% csrf_token %}
-                <label for="company_name">Company Name:</label>
-                <input type="text" id="company_name" name="company_name" required>
+                <div class="input-group">
+                    <label for="company_name">Company Name:</label>
+                    <input type="text" id="company_name" name="company_name" required>
+                </div>
 
-                <label for="designation">Designation:</label>
-                <input type="text" id="designation" name="designation" required>
+                <div class="input-group">
+                    <label for="designation">Designation:</label>
+                    <input type="text" id="designation" name="designation" required>
+                </div>
 
-                <label for="apply_link">Apply Link:</label>
-                <input type="text" id="apply_link" name="apply_link" required>
+                <div class="input-group">
+                    <label for="apply_link">Apply Link:</label>
+                    <input type="text" id="apply_link" name="apply_link" required>
+                </div>
 
-                <label for="location">Location:</label>
-                <input type="text" id="location" name="location" required>
+                <div class="input-group">
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
 
-                <button type="submit">SUBMIT</button>
-            </form>
+                <div class="input-group">
+                    <label for="salary">Salary:</label>
+                    <input type="text" id="salary" name="salary" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="qualification">Qualification:</label>
+                    <input type="text" id="qualification" name="qualification" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="experience">Experience:</label>
+                    <input type="text" id="experience" name="experience" required>
+                </div>
+                
+                </form>
+            <button type="submit">SUBMIT</button>
         </section>
     </main>
 </body>
