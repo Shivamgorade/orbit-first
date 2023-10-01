@@ -42,6 +42,9 @@ def find_talent(request):
         designation = request.POST['designation']
         apply_link = request.POST['apply_link']
         location = request.POST['location']
+        qualification = request.POST['qualification']
+        salary= request.POST['salary']
+        experience = request.POST['experience']
 
         # Prepend "http://" if the URL doesn't start with a scheme
         if not apply_link.startswith(('http://', 'https://')):
@@ -51,7 +54,10 @@ def find_talent(request):
             company_name=company_name,
             designation=designation,
             apply_link=apply_link,
-            location=location
+            location=location,
+            qualification=qualification,
+            salary=salary,
+            experience=experience,
         )
         card.save()
 

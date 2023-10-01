@@ -30,9 +30,12 @@
         {% if card_data %}
             {% for card in card_data %}
                 <div class="card">
-                    <h2>{{ card.company_name }}</h2>
-                    <p>{{ card.designation }}</p>
-                    <p>{{ card.location }}</p>
+                    <h2>{{ card.designation }}</h2>
+                    <h3>{{ card.company_name }}</h3>
+                    <p>Qualification:-{{card.qualification}}</p>
+                    <p>Salary:-{{card.salary}}</p>
+                    <p>Experience:-{{card.experience}}</p>   
+                    <p>Location:-{{ card.location }}</p>
                     <a href="{{ card.apply_link }}" class="apply-button">Apply</a>
                 </div>
             {% endfor %}
