@@ -4,7 +4,7 @@ from django.db import models
 class Card(models.Model):
     company_name = models.CharField(max_length=100)
     designation = models.CharField(max_length=100)
-    apply_link = models.URLField()
+    apply_link = models.CharField(max_length=100)
     location=models.CharField(max_length=100)
 
     def __str__(self):

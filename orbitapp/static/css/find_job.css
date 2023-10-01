@@ -14,18 +14,33 @@ body {
     color: #fff;
 }
 
-/* Style the header section */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.header .donate-button {
+    background-color:#227b43;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 /* Style the hero section */
 .hero {
-    background-image: linear-gradient(135deg, #0FF0B3, 
-    #036ED9);
+    background-image: linear-gradient(135deg, #0FF0B3, #227b43);
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -204,78 +219,4 @@ footer {
     border: 1px solid #a9a9a9;
     border-radius: 30px;
     margin-right: 10px;
-}
-/* Footer Styles */
-footer {
-    background-color: #333; /* Background color for the footer */
-    color: #fff; /* Text color */
-    padding: 30px 0;
-    font-size: 14px;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.footer-logo h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-social a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-.footer-info {
-    margin-top: 20px;
-}
-
-/* Media Queries - Adjust styles for smaller screens if needed */
-@media (max-width: 768px) {
-    footer {
-        text-align: center;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-links ul {
-        margin-top: 20px;
-    }
-
-    .footer-links ul li {
-        margin: 0;
-        padding: 10px 0;
-        display: block;
-    }
 }
