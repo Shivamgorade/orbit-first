@@ -19,4 +19,11 @@ class Quote(models.Model):
     def __str__(self):
         return self.text
 
+class Senior(models.Model):
+    name = models.CharField(max_length=100)
+    profession = models.CharField(max_length=100)
+    expertise = models.CharField(max_length=100)
+    experience_years = models.IntegerField()
+    working_in = models.CharField(max_length=100)    
+
 

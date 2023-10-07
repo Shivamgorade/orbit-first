@@ -1,13 +1,30 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/find_senior.css' %}">
 </head>
 <body>
-  <h1>these page is under maintaince
-    
-  </h1>
+    <div class="container">
+        <h1>Senior Details</h1>
+        <!-- Add the search form -->
+        <form method="GET" action="{% url 'search_seniors' %}">
+            <input type="text" name="expertise" placeholder="Search by Expertise">
+            <button type="submit">Search</button>
+        </form>
+        {% for senior in seniors %}
+            <div class="card">
+                <img src="{{ senior.picture.url }}" alt="Profile Picture">
+                <h2>{{ senior.name }}</h2>
+                <p>Profession: {{ senior.profession }}</p>
+                <p>Expertise: {{ senior.expertise }}</p>
+                <p>Experience: {{ senior.experience }} years</p>
+                <p>Working In: {{ senior.working_in }}</p>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
