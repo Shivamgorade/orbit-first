@@ -1,150 +1,44 @@
-/* Define a basic background color and font styles for the entire page */
-body {
+*{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 
-/* Style the header section */
-.header {
-    background-color: white;
+
+}
+.container{
+    background-image: url('../images/back-img.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.header .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.header .donate-button {
-    background-color:#227b43;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* Style the content section */
-.content {
-    background-color: #227b43; /* Green color box */
-    text-align: center;
-    padding: 100px 0;
-}
-
-.content h1 {
-    margin-top: -50px;
-    font-size: 42px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.content p {
-    font-size: 12px;
-    color: #ffffff;
-    margin: 20px 0;
-}
-
-#quoteDisplay {
-    margin: 0 auto;
-    width: fit-content;
-    height: fit-content;
-    background-color: #ced4d6; /* Background color */
-    border-radius: 13px; /* Rounded corners */
-    padding: 10px; /* Add padding to create some space between text and background */
-    font-weight: bold; /* Make the text bold */
-    color: rgb(28, 28, 28); /* Text color */
-}
-
-
-.img-container{
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
- 
-   
-   
 
 }
-/* Add margins to child images */
-.img-container img {
-    margin: 20px; /* Adjust the margin size as needed */
+.card{
+    width: 90%;
+    max-width: 1200px;
+    height: 500px;
+    color: #fff;
+    text-align: center;
+    padding: 50px 35px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
 }
-
-.image1{
-    margin-left: 0px;
+.card h2{
+    font-size: 40px;
+    font-weight: 600;
     margin-top: 20px;
-    width: 100%; /* Take up 100% of the container width */
-    max-width: 250px; /* Limit maximum width for larger screens */
-    border: 2px solid; /* Add a border for all images */
-    border-radius: 10px
 }
-.image2 {
-    margin-left: 0px;
-    margin-top: 20px;
-    width: 100%; /* Take up 100% of the container width */
-    max-width: 250px; /* Limit maximum width for larger screens */
-    border: 2px solid; /* Add a border for all images */
-    border-radius: 10px
-}
-.image3{
-    margin-left: 0px;
-    margin-top: 20px;
-    width: 100%; /* Take up 100% of the container width */
-    max-width: 250px; /* Limit maximum width for larger screens */
-    border: 2px solid; /* Add a border for all images */
-    border-radius: 10px
-}
-
-.btn1 {
-    margin-top: 178px;
-    margin-left: -200px;
-    background-color: #A2C579; /* Childish color for the button background */
-    color: rgb(49, 48, 48);
-     font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid;
-    border-color: black;
-    border-radius: 10px;
-    cursor: pointer;
-   /* Add margin between image and button */
-}
-.btn2{
-    margin-top: 178px;
-    margin-left: -200px;
-    background-color: #EFB495; /* Childish color for the button background */
-    color: rgb(49, 48, 48);
-     font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid;
-    border-color: black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.btn3{
-    margin-top: 178px;
-    margin-left: -200px;
-    background-color: #64CCC5; /* Childish color for the button background */
-    color: rgb(49, 48, 48);
-     font-weight: bold;
-    padding: 10px 20px;
-    border: 2px solid;
-    border-color: black;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-
-.btn1:hover {
-    background-color: #77d2a9; /* Change background color on hover */
-}
-.btn2:hover {
-    background-color: #df9797; /* Change background color on hover */
-}
-.btn3:hover {
-    background-color: #c387bc; /* Change background color on hover */
+.search-bar1{
+    width: 290px;
+    height: 41px;
+    border-radius: 19px;
+    border: 1px solid #000;
+    background: #e9e8ea7b;
 }

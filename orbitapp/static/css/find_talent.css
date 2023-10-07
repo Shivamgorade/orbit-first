@@ -7,7 +7,7 @@
 
 /* Apply a gradient background */
 body {
-    background: linear-gradient(135deg, #b6b6b6, #989895);
+background: #c7f4f4;
     font-family: Poppins, sans-serif;
     color: #fff;
 }
@@ -23,7 +23,7 @@ main {
 .form-container {
     width: 90%;
     max-width: 470px;
-    background: linear-gradient(135deg, #00feba, #0a751e);
+    background: linear-gradient(135deg, #00feba, #f1f9fb);
     color: #fff;
     margin: 20px auto 0;
     border-radius: 20px;
